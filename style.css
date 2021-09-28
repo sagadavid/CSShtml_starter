@@ -1,0 +1,91 @@
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: sans-serif;
+  color: #555;
+}
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+h1 {
+  font-size: 30px;
+  font-family: serif;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bolder;
+  color: #030303d0;
+}
+
+h2 {
+  font-size: 30px;
+  /*font-family: sans-serif;*/
+}
+
+h3 {
+  font-size: 25px;
+  /*font-family: sans-serif;*/
+}
+h4 {
+  font-size: 20px;
+  /*font-family: sans-serif;*/
+  text-transform: uppercase;
+  text-align: center;
+}
+
+li {
+  font-size: 18px;
+  /*font-family: sans-serif;*/
+}
+
+p {
+  font-size: 20px;
+  /*font-family: sans-serif;*/
+  line-height: 1.5;
+}
+
+/* footer p {
+  font-size: 15px;
+} */
+
+#kopi {
+  font-size: 16px;
+  font-family: serif;
+}
+
+/*article header p {
+  font-style: italic;
+}*/
+
+#skribent {
+  font-style: italic;
+  font-family: serif;
+  font-size: 18px;
+}
+
+.post-owner {
+  font-size: 18px;
+  font-weight: bold;
+  color: blueviolet;
+  text-transform: uppercase;
+}
+
+.undotted {
+  list-style: none;
+}
+.main-header {
+  background-color: #f6de03;
+}
+
+aside {
+  background-color: rgb(223, 222, 219);
+  border-top: 5px solid rgb(71, 138, 149);
+  border-bottom: 5px solid rgb(71, 138, 149);
+}
+body {
+  background-color: rgb(227, 235, 227);
+}

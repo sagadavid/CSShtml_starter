@@ -2,7 +2,9 @@
 <html lang="en" lang="nor">
   <head>
     <meta charset="UTF-8" />
+    <link href="style.css" rel="stylesheet"/>
     <title>the basic SPRÅK of the web is HTML</title>
+
   </head>
   <body>
     <!--   <h1>det grunnleggende spraak til nett er HTML</h1>
@@ -14,7 +16,7 @@
     <h7>h7 .. finnes noe som h7?</h7>
     src="https://i.ibb.co/Jr7Wh1d/challanges.jpg"
   -->
-    <header>
+    <header class="main-header">
       <h1>📘 DET KODE MAGASINET</h1>
       <nav>
         <a href="blog.html">BLOGGET</a>
@@ -33,7 +35,7 @@
           width="70"
           height="70"
         />
-        <p>
+        <p id="skribent">
           Posted <b>by</b> <strong>Laura Jones</strong> on Monday, June 21st
           2027
         </p>
@@ -104,14 +106,14 @@
     <aside>
       <h4><strong>Related Posts</strong></h4>
       <p>hey dude ! look, images are also <em>clickable</em> :)</p>
-      <ul>
+      <ul class="undotted">
         <li>
           <a href="#">how to pc litterate</a>
           <div></div>
           <a href="#"><img src="images/related-1.jpg" alt="a man before pc is screen" width="60" height="60" 
             /></a>
             </a>
-          <p>by Frederik</p>
+          <p class="post-owner">by Frederik</p>
         </li>
         <li>
           <a href="#">how to blitz</a>
@@ -119,7 +121,7 @@
           <a href="#"
             ><img src="images/related-2.jpg" alt="a lightening picture" width="60" height="60" 
           /></a>
-          <p>by Henry</p>
+          <p class="post-owner">by Henry</p>
         </li>
         <li>
           <a href="#">how to code, finally</a>
@@ -127,10 +129,10 @@
           <a href="#"
             ><img src="images/related-3.jpg" alt="a piece of code on the screen is seen" width="60" height="60" 
           /></a>
-          <p>by Matilda</p>
+          <p class="post-owner">by Matilda</p>
         </li>
       </ul>
     </aside>
-    <footer>Copyright &copy; ved Det kode tidsskriftet</footer>
+    <footer><p id="kopi">Copyright &copy; ved Det kode tidsskriftet</p></footer>
   </body>
 </html>
