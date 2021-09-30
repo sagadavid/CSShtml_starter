@@ -1,12 +1,33 @@
-h1,
+/* UNIVERSAL SELECTOR
+selects every single piece element
+inheritance not involved in universal selector
+
+
+*{
+color: lightcoral;
+}  */
+
+
+/*INHERITANCE*/
+body{
+/*will inherit to all text 
+unless overruled*/
+  color:black;
+  font-family: serif;
+  
+}
+
+/*COMMON ELEMENT SELECTOR*/
+/* h1,
 h2,
 h3,
 h4,
 p,
-li {
-  font-family: sans-serif;
-  color: #555;
-}
+li
+{
+  font-style:oblique;
+} */
+
 h1,
 h2,
 h3 {
@@ -20,7 +41,7 @@ h1 {
   font-weight: bolder;
   color: #030303d0;
 }
-
+/*SINGLE ELEMENT SELECTOR*/
 h2 {
   font-size: 30px;
   /*font-family: sans-serif;*/
@@ -33,25 +54,30 @@ h3 {
 h4 {
   font-size: 20px;
   /*font-family: sans-serif;*/
-  text-transform: uppercase;
+  text-transform:capitalize;
   text-align: center;
+  
 }
-
+/*LIST ENTITIES ARE SELECTED*/
 li {
   font-size: 18px;
-  /*font-family: sans-serif;*/
+  font-family: sans-serif;
+  color: grey;
+  font-stretch:ultra-condensed;
 }
-
+/*PARAGRAPHS ARE SELECTED*/
 p {
   font-size: 20px;
   /*font-family: sans-serif;*/
   line-height: 1.5;
 }
 
+/*footer paragraphs are selected*/
 /* footer p {
   font-size: 15px;
 } */
 
+/*ID QUOTES are used instead of single selecting*/
 #kopi {
   font-size: 16px;
   font-family: serif;
@@ -66,12 +92,12 @@ p {
   font-family: serif;
   font-size: 18px;
 }
-
+/*CALSSES are used instead of id quotings*/
 .post-owner {
   font-size: 18px;
   font-weight: bold;
   color: blueviolet;
-  text-transform: uppercase;
+  text-transform:capitalize;
 }
 
 .undotted {
@@ -80,7 +106,7 @@ p {
 .main-header {
   background-color: #f6de03;
 }
-
+/*single selecting, BODY and ASIDE*/
 aside {
   background-color: rgb(223, 222, 219);
   border-top: 5px solid rgb(71, 138, 149);
@@ -90,10 +116,102 @@ body {
   background-color: rgb(227, 235, 227);
 }
 
+/*PSEUDO-CLASSES are used instead of 
+single class selectors*/
+
 /* .first-element {
   font-weight: bold;
 } */
 
 li:first-child {
   font-weight: bold;
+}
+li:last-child {
+  font-family: serif;
+  font-style: italic;
+}
+
+li:nth-child(2) {
+  color: cornflowerblue;
+}
+
+li:nth-child(even) {
+  color: rgb(255, 00, 00);
+}
+
+/*misconseption/MISUSE of pseudo-classes*/
+article p:first-child {
+  /*if the first child is not a 
+  paragraph it wont work.
+  and even when it works pseudo-classes 
+  are best fitting to ordered and 
+  unordered lists etc not to an article 
+  which has multiple and mixed elements*/
+  color: darkgoldenrod;
+  font-family: serif;
+  font-style: italic;
+}
+article p:last-child {
+  color: darkgoldenrod;
+  font-family: serif;
+  font-style: italic;
+  background-color: darkgreen;
+}
+
+/*STYLING HYPER LINKS*/
+
+/*select anchors with link/href, 
+instead of selectin all anchors*/
+/*these anchor selections are 
+always in this order LVHA*/
+
+a:link {
+  color: blue;
+  background-color: blanchedalmond;
+  text-decoration: none;
+}
+a:visited {
+  font-family: monospace;
+  background-color: grey;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline wavy;
+  /*decoration inactive ---why??? */
+  because of safari. dont use it. use chrome/
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+/*resolving conflict*/
+/*selector spesifity is solution*/
+#kopi{
+  color:red;
+}
+.kopi{
+  color: blue;
+}
+.fake{
+  color: yellow;
+}
+
+footer p{
+  color:green;
+}
+/*lets create a conflict with anchors,
+specification determines color 
+thats why green dont work*/
+a {
+  color:green; /*!important;*/
+  /*to give presedence use 
+  !important keyword after green*/
+}
+
+botton:hover{
+  background-color: black;
 }
