@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" lang="nor">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link href="style.css" rel="stylesheet"/>
-    <title>the basic SPRÅK of the web is HTML</title>
-
+    <!-- this is important here below;
+    show the css link for this html file ! -->
+    <link href="style.css" rel="stylesheet" />
+    <title>SPRÅK TIL NETTEN ER HTML</title>
   </head>
   <body>
     <!--   <h1>det grunnleggende spraak til nett er HTML</h1>
@@ -16,126 +17,161 @@
     <h7>h7 .. finnes noe som h7?</h7>
     src="https://i.ibb.co/Jr7Wh1d/challanges.jpg"
   -->
-    <header class="main-header">
-      <h1>📘 DET KODE MAGASINET</h1>
-      <nav>
-        <a href="blog.html">BLOGGET</a>
-        <a href="#">Utfordringer</a>
-        <a href="#">CSS</a>
-        <a href="#">Flexbox</a>
-        <a href="#">somthingHere</a>
-      </nav>
-    </header>
-    <article>
-      <p>a test paragraph</p>
+    <div class="container">
+      <!-- we needed a container.. 
+      not a semantic element, div, to center all.. -->
+
+      <header class="main-header clearfix">
+        <h1>📘 Det kode magasinet</h1>
+        <nav>
+          <a href="blog.html">BLOGGET</a>
+          <a href="#">Utfordringer</a>
+          <a href="#">CSS</a>
+          <a href="#">Flexbox</a>
+          <a href="#">somthingHere</a>
+        </nav>
+        <!-- empty div below is a solution 
+          to clear those floats above, 
+          and is not a good solution-->
+        <!-- <div class="clear">emptydivtoclear</div> -->
+      </header>
+
+      <article>
+        <p>a test paragraph</p>
         <a>a test anchor without a link</a>
 
-      <header>
-        <h2>DET GRUNNLEGGENDE SPRÅKET PÅ NETTEN ER HTML</h2>
-        <img
-          src="images/laura-jones.jpg"
-          alt="postowners photo is visible now"
-          width="70"
-          height="70"
-        />
-        <p id="skribent">
-          Posted <b>by</b> <strong>Laura Jones</strong> on Monday, June 21st
-          2027
+        <header class="post-header">
+          <h2>DET GRUNNLEGGENDE SPRÅKET PÅ NETTEN ER HTML</h2>
+          <img
+            src="images/laura-jones.jpg"
+            alt="postowners photo is visible now"
+            width="70"
+            height="70"
+            class="author-img"
+          />
+          <p id="skribent" class="author">
+            Posted <b>by</b> <strong>Laura Jones</strong> on Monday, June 21st
+            2027
+          </p>
+          <img
+            src="images/post-img.jpg"
+            alt="a screenshot of html code is shown"
+            width="500"
+            height="200"
+            class="post-image"
+          />
+        </header>
+        <p>
+          All modern websites and <i>web applications</i> are built using three
+          <em>fundamental</em>
+          technologies: HTML, CSS and JavaScript. These are the languages of the
+          web.
         </p>
-        <img
-          src="images/post-img.jpg"
-          alt="a screenshot of html code is shown"
-          width="500"
-          height="200"
-        />
-      </header>
-      <p>
-        All modern websites and <i>web applications</i> are built using three
-        <em>fundamental</em>
-        technologies: HTML, CSS and JavaScript. These are the languages of the
-        web.
-      </p>
-      <p>
-        In this post, let's focus on HTML. We will learn what HTML is all about,
-        and why you too should learn it.
-      </p>
-      <h3>HVA ER DETTE HTML</h3>
-      <p>
-        HTML stands for <strong><em>H</em></strong
-        >yper <strong><em>T</em></strong
-        >ext <strong><em>M</em></strong
-        >arkup <strong><em>L</em></strong
-        >anguage. It's a markup language that web developers use to structure
-        and describe the content of a webpage (not a programming language).
-      </p>
-      <p>
-        HTML consists of elements that describe different types of content:
-        paragraphs, links, headings, images, video, etc. Web browsers understand
-        HTML and render HTML code as websites.
-      </p>
-      <p>In HTML, each element is made up of 3 parts:</p>
-      <ol>
-        <li class="first-element">The opening tag</li>
-        <li>The closing tag</li>
-        <li>The actual element</li>
-      </ol>
-      <p>
-        You can learn more at the
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/HTML"
-          target="_blank"
-          >MDN Web Docs</a
-        >
-        !!!!
-      </p>
-      <h3>HVORFOR BØR DU LÆRE DEG HTML</h3>
-      <p>
-        There are countless reasons for learning the fundamental language of the
-        web.
-      </p>
-      <p>Here are 5 of them:</p>
-      <ul>
-        <li class="first-element">To be able to use the fundamental web dev language</li>
-        <li>
-          To hand-craft beautiful websites instead of relying on tools like
-          Worpress or Wix
-        </li>
-        <li>To build web applications</li>
-        <li>To impress friends</li>
-        <li>To have fun</li>
-      </ul>
-      <p>😃 Hopefully you learned something new here. See you next time!</p>
-    </article>
-    <aside>
-      <h4><strong>Related Posts</strong></h4>
-      <p>hey dude ! look, images are also <em>clickable</em> :)</p>
-      <ul class="undotted">
-        <li>
-          <a href="#">how to pc litterate</a>
-          <div></div>
-          <a href="#"><img src="images/related-1.jpg" alt="a man before pc is screen" width="60" height="60" 
+        <p>
+          In this post, let's focus on HTML. We will learn what HTML is all
+          about, and why you too should learn it.
+        </p>
+        <h3>HVA ER DETTE HTML</h3>
+        <p>
+          HTML stands for <strong><em>H</em></strong
+          >yper <strong><em>T</em></strong
+          >ext <strong><em>M</em></strong
+          >arkup <strong><em>L</em></strong
+          >anguage. It's a markup language that web developers use to structure
+          and describe the content of a webpage (not a programming language).
+        </p>
+        <p>
+          HTML consists of elements that describe different types of content:
+          paragraphs, links, headings, images, video, etc. Web browsers
+          understand HTML and render HTML code as websites.
+        </p>
+        <p>In HTML, each element is made up of 3 parts:</p>
+        <ol>
+          <li class="first-element">The opening tag</li>
+          <li>The closing tag</li>
+          <li>The actual element</li>
+        </ol>
+        <p>
+          You can learn more at the
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+            target="_blank"
+            >MDN Web Docs</a
+          >
+          !!!!
+        </p>
+        <h3>HVORFOR BØR DU LÆRE DEG HTML</h3>
+        <p>
+          There are countless reasons for learning the fundamental language of
+          the web.
+        </p>
+        <p>Here are 5 of them:</p>
+        <ul>
+          <li class="first-element">
+            To be able to use the fundamental web dev language
+          </li>
+          <li>
+            To hand-craft beautiful websites instead of relying on tools like
+            Worpress or Wix
+          </li>
+          <li>To build web applications</li>
+          <li>To impress friends</li>
+          <li>To have fun</li>
+        </ul>
+        <p id="hoping">
+          😃 <br />Hopefully you learned something new here.<br />
+          See you next time!
+        </p>
+      </article>
+      <aside>
+        <h4><strong>Related Posts</strong></h4>
+        <p>hey dude ! look, images are also <em>clickable</em> :)</p>
+        <ul class="undotted">
+          <li>
+            <a href="#">how to pc litterate</a>
+            <div></div>
+            <a href="#"
+              ><img
+                src="images/related-1.jpg"
+                alt="a man before pc is screen"
+                width="60"
+                height="60"
             /></a>
-            </a>
-          <p class="post-owner">by Frederik</p>
-        </li>
-        <li>
-          <a href="#">how to blitz</a>
-          <div></div>
-          <a href="#"
-            ><img src="images/related-2.jpg" alt="a lightening picture" width="60" height="60" 
-          /></a>
-          <p class="post-owner">by Henry</p>
-        </li>
-        <li>
-          <a href="#">how to code, finally</a>
-          <div></div>
-          <a href="#"
-            ><img src="images/related-3.jpg" alt="a piece of code on the screen is seen" width="60" height="60" 
-          /></a>
-          <p class="post-owner">by Matilda</p>
-        </li>
-      </ul>
-    </aside>
-    <footer><p id="kopi" class="kopi fake">Copyright &copy; ved Det kode tidsskriftet</p></footer>
+            <!-- here was a stray <a>.. and prospected by html validator and i deleted it -->
+            <p class="post-owner">by Frederik</p>
+          </li>
+          <li>
+            <a href="#">how to blitz</a>
+            <div></div>
+            <a href="#"
+              ><img
+                src="images/related-2.jpg"
+                alt="a lightening picture"
+                width="60"
+                height="60"
+            /></a>
+            <p class="post-owner">by Henry</p>
+          </li>
+          <li>
+            <a href="#">how to code, finally</a>
+            <div></div>
+            <a href="#"
+              ><img
+                src="images/related-3.jpg"
+                alt="a piece of code on the screen is seen"
+                width="60"
+                height="60"
+            /></a>
+            <p class="post-owner">by Matilda</p>
+          </li>
+        </ul>
+      </aside>
+      <footer>
+        <p id="kopi" class="kopi fake">
+          Copyright &copy; ved Det kode tidsskriftet
+        </p>
+      </footer>
+      <button class="like">😍 Like</button>
+    </div>
   </body>
 </html>

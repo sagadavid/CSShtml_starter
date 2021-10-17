@@ -1,20 +1,61 @@
 /* UNIVERSAL SELECTOR
 selects every single piece element
-inheritance not involved in universal selector
+inheritance not involved in universal selector*/
 
+* {
+  margin: 0;
+  padding: 0;
+} /*this is very easy to override
+if you want for any element*/
 
-*{
-color: lightcoral;
-}  */
-
-
+/* PAGE ELEMENTS */
 /*INHERITANCE*/
-body{
-/*will inherit to all text 
+body {
+  /*will inherit to all text 
 unless overruled*/
-  color:black;
+  background-color: white;
+  color: black;
   font-family: serif;
-  
+  margin: 0; /*margin is not a 
+  property related to texts so 
+  that will not work for them,
+  we must use universal 
+  select to apply all*/
+  position: relative;
+}
+
+.container {
+  width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+}
+
+.main-header {
+  background-color: rgb(255, 210, 0);
+  padding: 5px 5px;
+  margin-bottom: 20px;
+  height: 40px;
+}
+
+nav {
+  font-size: 18px;
+  text-align: center;
+}
+article {
+  margin-bottom: 60px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+/*single selecting, BODY and ASIDE*/
+aside {
+  background-color: rgb(235, 230, 215);
+  border-top: 5px solid rgb(100, 120, 100);
+  border-bottom: 5px solid rgb(100, 120, 100);
+  padding: 25px 75px;
+  width: 400px;
 }
 
 /*COMMON ELEMENT SELECTOR*/
@@ -28,10 +69,11 @@ li
   font-style:oblique;
 } */
 
+/* SMALLER ELEMENTS */
 h1,
 h2,
 h3 {
-  color: #1098ad;
+  color: #508df0;
 }
 h1 {
   font-size: 30px;
@@ -40,36 +82,56 @@ h1 {
   font-style: normal;
   font-weight: bolder;
   color: #030303d0;
+  font-stretch: expanded;
 }
 /*SINGLE ELEMENT SELECTOR*/
 h2 {
   font-size: 30px;
-  /*font-family: sans-serif;*/
+  margin-bottom: 25px;
 }
 
 h3 {
   font-size: 25px;
-  /*font-family: sans-serif;*/
+  margin-bottom: 20px;
+  margin-top: 40px;
+  /*here up, we have collapsing spaces..
+  two margins set up and down but
+  collaps into the larger for userssake, automatically*/
 }
 h4 {
   font-size: 20px;
-  /*font-family: sans-serif;*/
-  text-transform:capitalize;
+  text-transform: capitalize;
   text-align: center;
-  
 }
+
+ol,
+ul {
+  /*after zeroing margins in universal,
+cant see dots, we need some space now*/
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
 /*LIST ENTITIES ARE SELECTED*/
 li {
   font-size: 18px;
   font-family: sans-serif;
-  color: grey;
-  font-stretch:ultra-condensed;
+  color: rgb(49, 24, 24);
+  font-stretch: ultra-condensed;
+  margin-bottom: 10px;
+  /* turn into inline element */
+  /* display: inline; */
 }
+
+li:last-child {
+  margin-bottom: 0;
+}
+
 /*PARAGRAPHS ARE SELECTED*/
 p {
   font-size: 20px;
-  /*font-family: sans-serif;*/
   line-height: 1.5;
+  margin-bottom: 15px;
 }
 
 /*footer paragraphs are selected*/
@@ -97,23 +159,13 @@ p {
   font-size: 18px;
   font-weight: bold;
   color: blueviolet;
-  text-transform:capitalize;
+  text-transform: capitalize;
 }
 
 .undotted {
   list-style: none;
-}
-.main-header {
-  background-color: #f6de03;
-}
-/*single selecting, BODY and ASIDE*/
-aside {
-  background-color: rgb(223, 222, 219);
-  border-top: 5px solid rgb(71, 138, 149);
-  border-bottom: 5px solid rgb(71, 138, 149);
-}
-body {
-  background-color: rgb(227, 235, 227);
+  /* turn block level element into inline element */
+  /* background-color: rgb(123, 145, 187); */
 }
 
 /*PSEUDO-CLASSES are used instead of 
@@ -121,6 +173,7 @@ single class selectors*/
 
 /* .first-element {
   font-weight: bold;
+  display: inline;
 } */
 
 li:first-child {
@@ -147,17 +200,20 @@ article p:first-child {
   are best fitting to ordered and 
   unordered lists etc not to an article 
   which has multiple and mixed elements*/
-  color: darkgoldenrod;
+  color: rgb(171, 174, 218);
   font-family: serif;
   font-style: italic;
 }
 article p:last-child {
-  color: darkgoldenrod;
+  color: rgb(187, 163, 101);
   font-family: serif;
   font-style: italic;
-  background-color: darkgreen;
+  /* background-color: darkgreen; */
 }
-
+#hoping {
+  color: blue;
+  text-align-last: center;
+}
 /*STYLING HYPER LINKS*/
 
 /*select anchors with link/href, 
@@ -166,7 +222,7 @@ instead of selectin all anchors*/
 always in this order LVHA*/
 
 a:link {
-  color: blue;
+  color: rgb(62, 62, 160);
   background-color: blanchedalmond;
   text-decoration: none;
 }
@@ -176,11 +232,11 @@ a:visited {
 }
 
 a:hover {
-  color: orangered;
+  color: rgb(255, 187, 0);
   font-weight: bold;
   text-decoration: underline wavy;
-  /*decoration inactive ---why??? */
-  because of safari. dont use it. use chrome/
+  /*decoration inactive ---why??? 
+  because of safari. use chrome*/
 }
 
 a:active {
@@ -188,30 +244,168 @@ a:active {
   font-style: italic;
 }
 
-/*resolving conflict*/
+/*RESOLVING CONFLICTS*/
 /*selector spesifity is solution*/
-#kopi{
-  color:red;
+#kopi {
+  color: red;
 }
-.kopi{
+.kopi {
   color: blue;
 }
-.fake{
+.fake {
   color: yellow;
 }
 
-footer p{
-  color:green;
+footer p {
+  color: rgb(236, 155, 166);
 }
 /*lets create a conflict with anchors,
 specification determines color 
 thats why green dont work*/
 a {
-  color:green; /*!important;*/
+  color: green; /*!important;*/
   /*to give presedence use 
   !important keyword after green*/
 }
 
-botton:hover{
+botton:hover {
   background-color: black;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  /*auto works after width*/
+  /* images work as inline block element see below*/
+  /* margin-right: 30px;
+  margin-top: 30px; */
+}
+
+/* turn inline element into 
+inlie-block level element 
+which can take in margins now
+though it is inline element*/
+
+nav a:link {
+  background-color: rgb(90, 90, 90);
+  padding: 5px;
+  color: white;
+  display: inline-block;
+  margin-right: 30px;
+  margin-top: 10px;
+  /* text-align: center; 
+  wont work here, uplift it to parent*/
+}
+nav a:link:hover {
+  color: yellow;
+  font-stretch: wider;
+  text-decoration: none;
+}
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+.like {
+  font-size: 22px;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0px;
+  right: 50px;
+}
+
+/* PSEUDO CLASSES has :, and 
+PSEUDO ELEMENTS has :: */
+h1::first-letter {
+  /* here first letter is emoji */
+  font-weight: bolder;
+  font-size: 80ox;
+  margin-right: 15px;
+}
+
+h2::first-letter {
+  font-size: 30px;
+}
+
+/* p::first-line {
+  color: green;
+} */
+
+/* adjacent sibling to h3*/
+/* OBS !! no space before colon */
+/* h3 + p::first-line {
+  color: red;
+} */
+
+/* PSEUDO AFTER/BEFORE ELEMENT
+TO ADD MINOR TOUCHES, 
+INSTEAD OF CREATING 
+A NEW ELEMENT */
+h2 {
+  position: relative;
+  padding: 10px;
+  padding-left: 0;
+}
+h2::after {
+  content: "Toppen";
+  /* YOU SHOULD DEFINE CONTENT,
+  EVEN IF IT IS BLANK */
+  background-color: rgb(171, 174, 218);
+  padding: 1px 1px;
+  font-size: 13px;
+  font-weight: lighter;
+  /* ALL PSEUDOS ARE INLINE ELEMENTS
+  and to make them as block, 
+  use inline-block display */
+  display: inline-block;
+  position: absolute;
+  top: -15px;
+  right: -25px;
+  color: white;
+}
+/* FLOATS */
+
+.author-img {
+  float: left;
+  margin-bottom: 20px;
+  /* padding-bottom: 20px; */
+}
+.author {
+  float: left;
+  padding-left: 20px;
+  padding-top: 20px;
+  /* margin-bottom: 20px; */
+}
+
+h1 {
+  float: left;
+}
+nav {
+  float: right;
+}
+
+/* to clear the floats(a) */
+/* .clear {
+  clear: both;
+} */
+
+/* to clear the floats (b)*/
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+article {
+  width: 850px;
+  float: left;
+}
+
+aside {
+  width: 250px;
+  float: right;
+}
+
+footer {
+  clear: both;
 }
